@@ -53,9 +53,6 @@ public class FileSupportHelper {
 
     @PostConstruct
     public void init(){
-/*        this.supportedFiles= Stream.of(documents, spreadsheets, presentations,images,portables,html,metafiles,photoshop
-                ,project,outlook,email,diagrams,autocad,postscript,coreldraw,others)
-                .flatMap(item -> item.stream().map(d -> d.trim())).collect(Collectors.toList());*/
         this.supportedFiles= Stream.of(documents, spreadsheets, presentations,images,portables,html,metafiles,photoshop
                         ,project,outlook,email,diagrams,autocad,postscript,coreldraw,others)
                 .flatMap(Collection::stream).collect(Collectors.toList());
