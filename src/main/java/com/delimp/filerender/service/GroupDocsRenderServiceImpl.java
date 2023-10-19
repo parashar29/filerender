@@ -40,17 +40,17 @@ public class GroupDocsRenderServiceImpl implements  GroupDocsRenderService{
             if(fileSupportHelper.getPossiblesupportedFile(renderRequest.getSourceFile())== null){
                 errorMessage= AppConstant.ERROR_MESSAGE;
             }else{
-                try(Viewer viewer = new Viewer(renderRequest.getSourceFile())){
-                    PdfViewOptions viewOptions = new PdfViewOptions(renderRequest.getDestinationFile());
-                    viewer.view(viewOptions);
-                    successMessage=AppConstant.SUCCESS_MESSAGE;
-                }catch (Exception exception){
-                    exception.printStackTrace();
-                    detailedErrorMessage=exception.getCause().toString();
-                    errorMessage= exception.getMessage();
-                }
                 if(renderRequest.getProcess().trim().equalsIgnoreCase("viewer")){
-                }else if(renderRequest.getProcess().trim().equalsIgnoreCase("conversion")){
+                    try(Viewer viewer = new Viewer(renderRequest.getSourceFile())){
+                        PdfViewOptions viewOptions = new PdfViewOptions(renderRequest.getDestinationFile());
+                        viewer.view(viewOptions);
+                        successMessage=AppConstant.SUCCESS_MESSAGE;
+                    }catch (Exception exception){
+                        exception.printStackTrace();
+                        detailedErrorMessage=exception.toString();
+                        errorMessage= exception.getMessage();
+                    }
+                }else if(!renderRequest.getProcess().trim().equalsIgnoreCase("viewer")){
                     errorMessage= AppConstant.UNDER_CONSTRUCTION;
                 }
                 renderResponse= GroupDocsRenderResponse.builder().message(successMessage).build();
@@ -59,7 +59,7 @@ public class GroupDocsRenderServiceImpl implements  GroupDocsRenderService{
         } catch (Exception e){
             e.printStackTrace();
             errorMessage= e.getMessage();
-            detailedErrorMessage=e.getCause().toString();
+            detailedErrorMessage=e.toString();
         }finally {
             errorResponse=ErrorResponse.builder().message(errorMessage).issue(detailedErrorMessage).build();
             appResonse= AppResonse.<GroupDocsRenderResponse>builder().data(renderResponse).errors(errorResponse).build();

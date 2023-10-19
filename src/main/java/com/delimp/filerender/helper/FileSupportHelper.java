@@ -51,6 +51,7 @@ public class FileSupportHelper {
 
     public List<String> supportedFiles ;
 
+
     @PostConstruct
     public void init(){
         this.supportedFiles= Stream.of(documents, spreadsheets, presentations,images,portables,html,metafiles,photoshop
