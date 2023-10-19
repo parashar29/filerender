@@ -298,3 +298,21 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Throwable.getStackTrace
 2023-10-20T01:48:19.044+05:30  INFO 24872 --- [http-nio-9090-exec-2] c.d.f.s.GroupDocsRenderServiceImpl       : response payload {}{"data":{},"errors":{"message":"this feature is comming sonn."}}
 2023-10-20T01:48:40.644+05:30  INFO 24872 --- [http-nio-9090-exec-3] c.d.f.s.GroupDocsRenderServiceImpl       : request payload {}{"process":"viewer","sourceFile":"input/file-sample_1MB.docx","extension":"xlsx","destinationFile":"output/file-sample_1MB.docx.pdf","pdfOptions":{}}
 2023-10-20T01:48:40.648+05:30  INFO 24872 --- [http-nio-9090-exec-3] c.d.f.s.GroupDocsRenderServiceImpl       : response payload {}{"data":{"message":"preview file rendered at provided location successfully."},"errors":{}}
+2023-10-20T01:52:44.785+05:30  INFO 25465 --- [main] c.d.filerender.FileRenderApplication     : Starting FileRenderApplication using Java 17.0.2 with PID 25465 (/Users/pdevashish/IdeaProjects/filerender/target/classes started by pdevashish in /Users/pdevashish/IdeaProjects/filerender)
+2023-10-20T01:52:44.788+05:30  INFO 25465 --- [main] c.d.filerender.FileRenderApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-10-20T01:52:46.302+05:30  INFO 25465 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-10-20T01:52:46.314+05:30  INFO 25465 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-20T01:52:46.314+05:30  INFO 25465 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-20T01:52:46.619+05:30  INFO 25465 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-20T01:52:46.621+05:30  INFO 25465 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1746 ms
+2023-10-20T01:52:48.511+05:30  INFO 25465 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-10-20T01:52:48.533+05:30  INFO 25465 --- [main] c.d.filerender.FileRenderApplication     : Started FileRenderApplication in 4.409 seconds (process running for 5.264)
+2023-10-20T01:53:00.011+05:30  INFO 25465 --- [http-nio-9090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-20T01:53:00.011+05:30  INFO 25465 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-20T01:53:00.015+05:30  INFO 25465 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-10-20T01:53:08.906+05:30  INFO 25465 --- [http-nio-9090-exec-3] c.d.f.s.GroupDocsRenderServiceImpl       : request payload {}{"process":"viewer","sourceFile":"input/file-sample_1MB.docx","extension":"xlsx","destinationFile":"output/file-sample_1MB.docx.pdf","pdfOptions":{}}
+2023-10-20T01:53:08.932+05:30  INFO 25465 --- [http-nio-9090-exec-3] c.d.f.s.GroupDocsRenderServiceImpl       : response payload {}{"data":{"message":"preview file rendered at provided location successfully."},"errors":{}}
+2023-10-20T01:53:11.067+05:30  INFO 25465 --- [http-nio-9090-exec-2] c.d.f.s.GroupDocsRenderServiceImpl       : request payload {}{"process":"viewer1","sourceFile":"input/file-sample_1MB.docx","extension":"xlsx","destinationFile":"output/file-sample_1MB.docx.pdf","pdfOptions":{}}
+2023-10-20T01:53:11.068+05:30  INFO 25465 --- [http-nio-9090-exec-2] c.d.f.s.GroupDocsRenderServiceImpl       : response payload {}{"data":{},"errors":{"message":"this feature is comming sonn."}}
+2023-10-20T01:56:25.472+05:30  INFO 25465 --- [http-nio-9090-exec-6] c.d.f.s.GroupDocsRenderServiceImpl       : request payload {}{"process":"viewer","sourceFile":"input/kaung-myat-min-iBLWICTNt0Y-unsplash.jpg","extension":"xlsx","destinationFile":"output/kaung-myat-min-iBLWICTNt0Y-unsplash.jpg.pdf","pdfOptions":{}}
+2023-10-20T01:56:25.476+05:30  INFO 25465 --- [http-nio-9090-exec-6] c.d.f.s.GroupDocsRenderServiceImpl       : response payload {}{"data":{"message":"preview file rendered at provided location successfully."},"errors":{}}

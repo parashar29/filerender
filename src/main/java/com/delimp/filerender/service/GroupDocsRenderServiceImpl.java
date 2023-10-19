@@ -50,7 +50,7 @@ public class GroupDocsRenderServiceImpl implements  GroupDocsRenderService{
                         detailedErrorMessage=exception.toString();
                         errorMessage= exception.getMessage();
                     }
-                }else if(!renderRequest.getProcess().trim().equalsIgnoreCase("viewer")){
+                }else /*if(!renderRequest.getProcess().trim().equalsIgnoreCase("viewer"))*/{
                     errorMessage= AppConstant.UNDER_CONSTRUCTION;
                 }
                 renderResponse= GroupDocsRenderResponse.builder().message(successMessage).build();
