@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.delimpe</groupId>
+	<artifactId>FileRender</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>FileRender</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<release.version>23.9</release.version>
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.13.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-conversion</artifactId>
+			<version>23.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-viewer</artifactId>
+			<version>23.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.0.1-jre</version>
+		</dependency>
+
+		<!--
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-annotation</artifactId>
+			<version>23.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-assembly</artifactId>
+			<version>23.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-comparison</artifactId>
+			<version>23.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-editor</artifactId>
+			<version>${release.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-merger</artifactId>
+			<version>23.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-metadata</artifactId>
+			<version>23.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-parser</artifactId>
+			<version>${release.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-redaction</artifactId>
+			<version>${release.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-search</artifactId>
+			<version>23.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-signature</artifactId>
+			<version>23.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-viewer</artifactId>
+			<version>23.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.groupdocs</groupId>
+			<artifactId>groupdocs-watermark</artifactId>
+			<version>21.3</version>
+		</dependency>
+		-->
+
+		<!--	<dependency>
+                <groupId>com.groupdocs</groupId>
+                <artifactId>groupdocs-total</artifactId>
+                <version>22.5</version>
+                <type>pom</type>
+            </dependency>
+    -->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>GroupDocs Artifact Repository</id>
+			<name>GroupDocs Artifact Repository</name>
+			<url>https://releases.groupdocs.com/java/repo/</url>
+		</repository>
+	</repositories>
+
+
+</project>
